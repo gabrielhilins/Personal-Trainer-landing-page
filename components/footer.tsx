@@ -3,6 +3,7 @@
 import { CgGym } from "react-icons/cg"
 import { FaInstagram, FaTiktok, FaFacebookF } from "react-icons/fa"
 import { motion } from "framer-motion"
+import { PoweredBy } from "@/components/powered-by"
 
 export function Footer() {
   return (
@@ -49,33 +50,13 @@ export function Footer() {
           </div>
         </motion.div>
 
-        <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-          className="mt-8 pt-8 border-t border-border flex flex-col items-center gap-4"
-        >
+          <div className="mt-8 pt-8 border-t border-border flex flex-col items-center gap-4">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Rafael Mendes. Todos os direitos reservados.
           </p>
 
-          <div className="flex items-center gap-2 text-[10px] tracking-[0.15em] text-muted-foreground/50 font-[family-name:var(--font-quicksand)]">
-            <span className="uppercase italic opacity-85">desenvolvido por</span>
-            <a 
-              href="https://ggabstechdesign.com.br" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-primary transition-all duration-500 hover:-translate-y-1 group"
-            >
-              <img 
-                src="/Wordmark SVG.svg" 
-                alt="GGABS" 
-                className="h-6 w-auto grayscale brightness-200 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500" 
-              />
-            </a>
-          </div>
-        </motion.div>
+          <PoweredBy />
+        </div>
       </div>
     </footer>
   )
