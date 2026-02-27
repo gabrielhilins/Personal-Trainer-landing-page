@@ -19,6 +19,13 @@ export function HeroSection() {
     })
   };
 
+  const mes = new Date().getMonth() + 1
+  const monthNamesInPortuguese = [
+    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+  ];
+  const currentMonthName = monthNamesInPortuguese[mes - 1];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-20">
       <div
@@ -40,7 +47,7 @@ export function HeroSection() {
           >
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             <span className="text-sm font-medium text-primary">
-              Vagas limitadas para Janeiro
+              Vagas limitadas para {currentMonthName}
             </span>
           </motion.div>
 
