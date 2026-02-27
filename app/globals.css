@@ -11,7 +11,7 @@
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.16 0.005 285);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.88 0.2 105);
+  --primary: oklch(0.88 0.2 105); /* Yellow color */
   --primary-foreground: oklch(0.13 0.005 285);
   --secondary: oklch(0.22 0.005 285);
   --secondary-foreground: oklch(0.98 0 0);
@@ -41,13 +41,13 @@
 }
 
 .dark {
-  --background: oklch(0.13 0.005 285);
+  --background: oklch(0.13 0.005 285); /* Black background */
   --foreground: oklch(0.98 0 0);
   --card: oklch(0.16 0.005 285);
   --card-foreground: oklch(0.98 0 0);
   --popover: oklch(0.16 0.005 285);
   --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.88 0.2 105);
+  --primary: oklch(0.88 0.2 105); /* Yellow color */
   --primary-foreground: oklch(0.13 0.005 285);
   --secondary: oklch(0.22 0.005 285);
   --secondary-foreground: oklch(0.98 0 0);
@@ -128,4 +128,24 @@
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevents horizontal scrollbars */
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background); /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary); /* Color of the scrollbar thumb (project yellow) */
+  border-radius: 6px; /* Rounded corners for the scrollbar thumb */
+  border: 3px solid var(--background); /* Creates padding around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent); /* Slightly different yellow on hover */
 }

@@ -19,6 +19,13 @@ export function HeroSection() {
     })
   };
 
+  const mes = new Date().getMonth() + 1
+  const monthNamesInPortuguese = [
+    "Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+  ];
+  const currentMonthName = monthNamesInPortuguese[mes - 1];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 lg:pt-20">
       <div
@@ -27,7 +34,7 @@ export function HeroSection() {
           backgroundImage: `url('/professional-personal-trainer-muscular-man-in-dark.jpg')`,
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60" />
+      <div className="absolute inset-0 bg-linear-to-r from-background via-background/90 to-background/60" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="max-w-3xl">
@@ -40,7 +47,7 @@ export function HeroSection() {
           >
             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             <span className="text-sm font-medium text-primary">
-              Vagas limitadas para Janeiro
+              Vagas limitadas para {currentMonthName}
             </span>
           </motion.div>
 

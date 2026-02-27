@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import "aos/dist/aos.css"
 import { Quicksand } from "next/font/google"
+import LenisProvider from "./providers/LenisProvider"
 
 
 const quicksand = Quicksand({ 
@@ -46,7 +47,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`font-sans antialiased`}>
-        {children}
+        <LenisProvider>
+          {children}
+        </LenisProvider>
         <Analytics />
       </body>
     </html>

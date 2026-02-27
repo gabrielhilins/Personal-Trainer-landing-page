@@ -9,7 +9,8 @@ export function CtaSection() {
   return (
     <section className="py-24 lg:py-40 bg-background relative overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[1200px] aspect-square bg-primary/20 rounded-full blur-[140px] animate-pulse" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-300 aspect-square bg-primary/
+20 rounded-full blur-[140px] animate-pulse" />
         <div className="absolute -top-[20%] -left-[10%] w-[60%] aspect-square bg-primary/10 rounded-full blur-[120px] animate-[bounce_15s_infinite]" />
         <div className="absolute -bottom-[20%] -right-[10%] w-[60%] aspect-square bg-primary/10 rounded-full blur-[120px] animate-[bounce_12s_infinite]" />
       </div>
@@ -61,7 +62,7 @@ export function CtaSection() {
                   <HiArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
                 </span>
 
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-[45deg] -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-1000 ease-in-out" />
+                                <span className="absolute inset-0 w-full h-full bg-linear-to-r from-transparent via-white/30 to-transparent -skew-x-45 -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-1000 ease-in-out" />
               </a>
             </Button>
           </motion.div>
